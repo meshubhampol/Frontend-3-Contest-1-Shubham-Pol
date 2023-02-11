@@ -10,7 +10,7 @@ const data = fetch(url).then(response => response.json()).then(
 // accessing the flexbox from html
 let flexbox = document.getElementById('items-flex');
 
-// defining as global variables
+// defining every property of product as global variable
 let title;
 let brand;
 let price;
@@ -31,13 +31,13 @@ function createFlexwrap(arr) {
         thumbnail=arr[item].thumbnail;
         discount=arr[item].discountPercentage;
         id=arr[item].id;
-        // function to create and display the data on page
+        // calling the function to create and display the data on page
         showOnWebPage();
     }
 }
 
 function showOnWebPage() {
-    // creating item div tag
+    // creating product div tag
     let flexDiv = document.createElement('div');
     flexDiv.classList.add('item');
 
